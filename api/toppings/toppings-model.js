@@ -1,38 +1,38 @@
 const db = require('../../db')
 
 function find(){
-	return db("toppings")
+	return db("Toppings")
 		.select("*")
 }
 
 function findBy(filter){
 	console.log(filter)
 	console.log("in the findBy")
-	return db("toppings")
+	return db("Toppings")
 		.select("*")
 		.where(filter)
 }
 
 function findById(id){
-	return db("toppings")
+	return db("Toppings")
 		.select("*")
 		.where({ id })
 		.first()
 }
 
-async function add(toppings){
-	const [id] = await db("toppings").insert(toppings, "id")
+async function add(Toppings){
+	const [id] = await db("Toppings").insert(Toppings, "id")
 	return findById(id);
 }
 
 const remove = (id) =>{
-    return db('toppings')
+    return db('Toppings')
     .where({id})
     .del()
 }
 
 const update = (id, changes) => {
-    return db('toppings')
+    return db('Toppings')
     .where({id})
     .update(changes, '*')
 }

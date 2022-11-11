@@ -1,42 +1,42 @@
 const db = require('../../db')
 
 function find(){
-	return db("pizza")
+	return db("Pizza")
 		.select("*")
 }
 
 function findBy(filter){
 	console.log(filter)
 	console.log("in the findBy")
-	return db("pizza")
+	return db("Pizza")
 		.select("*")
 		.where(filter)
 }
 
 function findById(id){
 	console.log("in the model findById", id)
-	return db("pizza")
+	return db("Pizza")
 		.select("*")
 		.where({ id })
 		.first()
 }
 
-async function add(pizza){
-	console.log("in the model add", pizza)
-	const [id] = await db("pizza").insert(pizza, "id")
+async function add(Pizza){
+	console.log("in the model add", Pizza)
+	const [id] = await db("Pizza").insert(Pizza, "id")
 	console.log(id)
 	return findById(id);
 }
 
 const remove = (id) =>{
 	console.log('deelte id', id)
-    return db('pizza')
+    return db('Pizza')
     .where({id})
     .del()
 }
 
 const update = (id, changes) => {
-    return db('pizza')
+    return db('Pizza')
     .where({id})
     .update(changes, '*')
 }
