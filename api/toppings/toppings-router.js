@@ -33,7 +33,6 @@ router.get('/:id', (req, res) => {
         }
     })
     .catch(err => {
-        console.log("failure", error)
         res.status(500).json({
         message: 'Error retrieving toppings'
         })
