@@ -8,6 +8,7 @@ const client = new Client({
     database: 'postgres'
 
 })
+// 68.99.241.218 public range ip address 
 
 client.connect(function(err) {
     if (err) throw err;
