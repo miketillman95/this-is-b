@@ -4,7 +4,11 @@ const router = require('express').Router()
 router.get('/', (req, res) => {
     Pizza.find(req.query)
     .then(pizza => {
-        res.status(200).json(pizza)
+        if( pizza> 0){
+            res.status(200).json(pizza)
+        }else{
+            res.status(204).json({message: "There is no pizza in the Database"})
+        }
     })
     .catch(err => {
         res.status(500).json({
