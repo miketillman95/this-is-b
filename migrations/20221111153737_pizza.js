@@ -3,7 +3,7 @@
  * @returns { Promise<void> }
  */
 exports.up = function(knex) {
-    return knex.schema.createTable('pizza', tbl => {
+    return knex.schema.createTable('Pizza', tbl => {
         tbl.increments("id");
         tbl.string('type', 128)
         tbl.string('toppings', 100)

@@ -10,7 +10,7 @@ module.exports = {
     connection: {
       user: 'mike',
       password: process.env.PASSWORD,
-      database: 'Pizza'
+      database: 'postgres'
     },
     pool: {
       min: 2,
