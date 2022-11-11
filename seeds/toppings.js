@@ -2,7 +2,7 @@
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> } 
  */
- exports.seed = async function(knex) {
+exports.seed = async function(knex) {
   // Deletes ALL existing entries
   await knex('toppings').del()
   await knex('toppings').insert([
@@ -11,3 +11,4 @@
     { type: 'jalapeno', amount: 0, buy_more: true },
   ]);
 };
+
