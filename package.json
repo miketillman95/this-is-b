@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "node index"
+    "server": "node index",
+    "migrate": "npx knex migrate:latest  db/knexfile.js"
   },
   "keywords": [],
   "author": "",
