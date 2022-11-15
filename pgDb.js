@@ -5,7 +5,8 @@ const client = new Client({
     user: 'mike',
     port: process.env.PORT,
     password: process.env.PASSWORD,
-    database: 'postgres'
+    database: 'postgres',
+    sslmode:'require'
 
 })
 // 68.99.241.218 public range ip address 
