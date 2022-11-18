@@ -5,12 +5,7 @@ const router = require('express').Router()
 router.get('/', (req, res) => {
     Toppings.find(req.query)
     .then(toppings => {
-        if(toppings > 0 ){
-            res.status(200).json(toppings)
-        }else {
-            res.status(204).json({message:"There are no toppings in the database"})
-
-        }
+        res.status(200).json(toppings)
     })
     .catch(err => {
         res.status(500).json({
@@ -33,7 +28,7 @@ router.get('/:id', (req, res) => {
         }
     })
     .catch(err => {
-        res.status(500).json({
+        res.status(501).json({
         message: 'Error retrieving toppings'
         })
     })
