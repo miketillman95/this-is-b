@@ -22,7 +22,7 @@ module.exports = {
 	client:'postgres',
 		connection: {
 		host: 'this-is-b.cyndowqeicjd.us-east-1.rds.amazonaws.com',
-		port: process.env.PORT,
+		port: process.env.POSTGRES_PORT,
 		database: 'postgres',
 		user: 'mike',
 		password: process.env.PASSWORD
