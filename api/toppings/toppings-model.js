@@ -13,6 +13,8 @@ function findBy(filter){
 		.where(filter)
 }
 
+
+
 function findById(id){
 	return db("Toppings")
 		.select("*")
@@ -36,11 +38,12 @@ const update = (id, changes) => {
     .where({id})
     .update(changes, '*')
 }
+
 module.exports = {
     add,
     findById,
 	findBy,
     find,
     update, 
-    remove
+    remove,
 }

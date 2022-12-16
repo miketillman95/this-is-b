@@ -1,5 +1,6 @@
 const Pizza = require('./pizza-model')
 const router = require('express').Router()
+const {duplicatePizza} = require('../Validation/Validate')
 // works
 router.get('/', (req, res) => {
     Pizza.find(req.query)
@@ -34,7 +35,7 @@ router.get('/:id', (req, res) => {
 });  // return the item object with the matching id (working)
 
 
-router.post('/', (req, res) => {
+router.post('/', duplicatePizza, (req, res) => {
     Pizza.add(req.body)
     .then(pizza => {
         console.log("success",req.body)

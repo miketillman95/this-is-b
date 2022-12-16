@@ -1,6 +1,6 @@
 const express = require('express')
 const server = express()
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 4000
 const cors = require('cors')
 const pizzaRouter = require('./api/pizza/pizza-router')
 const toppingsRouter = require('./api/toppings/toppings-router')

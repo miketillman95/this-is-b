@@ -20,6 +20,13 @@ function findById(id){
 		.where({ id })
 		.first()
 }
+function findByType(type){
+	console.log(type)
+	console.log("in the findBy")
+	return db("Pizza")
+		.select("*")
+		.where({type})
+}
 
 async function add(Pizza){
 	console.log("in the model add", Pizza)
@@ -40,11 +47,13 @@ const update = (id, changes) => {
     .where({id})
     .update(changes, '*')
 }
+
 module.exports = {
     add,
     findById,
 	findBy,
     find,
     update, 
-    remove
+    remove,
+	findByType
 }
