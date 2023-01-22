@@ -1,8 +1,8 @@
 Npm i to download dependencies
 
-Workingo on adding middleware to function to check for duplicates in the post router
+LESSON LEARNED FROM BUILDING THIS APPLICATION:
 
-Have deployed the database to AWS and AZURE but AZURE has caused the most issues when coming to launching the DB on a cloud service, so am sticking with AWS for RDS. Attemped to launch the server on Azure but would not read AWS RDS so switched. Still working on launching the server because I have ran into issues with AWS ELB and will probably start from scratch and relaunch again but this is the current progress I have. 
+Always run CI/CD early in the project,  was attempting to deploy but will not build on deployment and too many bugs to back track
 
 
 npx knex migrate:make 
